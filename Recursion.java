@@ -32,11 +32,18 @@ public class Recursion{
      *fib(5) = 5
      *precondition: n is non-negative
      */
-    public static int fib(int n){
-      if (n > 1){
-        return fib(n-1) + fib(n-2);
+     public static int fib(int n){
+       return fibHelper(n, 1, 1);
+     }
+
+    public static int fibHelper(int n, int a, int b){
+      if (n == 0){
+        return 0;
+      }
+      if (n > 2){
+        return fibHelper(n-1, b, a+b);
       } else {
-        return 1;
+        return b;
       }
     }
 
