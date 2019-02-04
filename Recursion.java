@@ -62,6 +62,7 @@ public class Recursion{
         // System.out.println(sqrt(i, 0.01));
         System.out.println(fib(i));
       }
+      System.out.println(makeAllSums(5));
     }
 
 }
