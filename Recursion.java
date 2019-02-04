@@ -40,7 +40,9 @@ public class Recursion{
     // }
 
     public static void main(String[] args){
-
+      for (int i=0; i<20; i++){
+        System.out.println(sqrt(i, 0.01));
+      }
     }
 
 }
