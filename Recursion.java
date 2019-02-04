@@ -31,7 +31,11 @@ public class Recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-      return 0;
+      if (n > 1){
+        return fib(n-1) + fib(n-2);
+      } else {
+        return 1;
+      }
     }
 
     /*As Per classwork*/
