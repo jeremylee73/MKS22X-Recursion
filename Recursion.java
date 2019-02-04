@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Recursion{
     /*You may write additional private methods */
 
@@ -39,9 +41,21 @@ public class Recursion{
     }
 
     /*As Per classwork*/
-    // public static ArrayList<Integer> makeAllSums(int n){
-    //
-    // }
+    public static ArrayList<Integer> makeAllSums(int n){
+      ArrayList<Integer> ans = new ArrayList<Integer>();
+      sumsHelper(n, 0, ans);
+      return ans;
+    }
+
+    private static void sumsHelper(int n, int total, ArrayList<Integer> list) {
+      if (n != 0) {
+        sumsHelper(n-1, total+n, list);
+        sumsHelper(n-1, total, list);
+      } else {
+        list.add(total);
+      }
+    }
+
 
     public static void main(String[] args){
       for (int i=0; i<20; i++){
